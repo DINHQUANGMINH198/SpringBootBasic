@@ -1,0 +1,18 @@
+logging:
+    level:
+        root: INFO
+server:
+    port: 8081
+spring:
+    data:
+        mongodb:
+            database: testdb
+            database.name: user
+            host: localhost
+            password: minh1908
+            port: 27017
+            user: minhdq
+    datasource:
+        password: minhdq
+        url: jdbc:mysql://localhost:3306/testdb?useSSL=false
+        username: root
