@@ -1,5 +1,7 @@
 package test5;
 
+import hello.HelloService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -11,6 +13,8 @@ import test5.others.OtherGirl;
 public class App {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(App.class, args);
+        HelloService a = context.getBean(HelloService.class); // call cusstom stater
+        a.sayHello();
         try {
             Girl girl = context.getBean(Girl.class);
             System.out.println("Bean: " + girl.toString());
